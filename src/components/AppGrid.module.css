@@ -1,11 +1,44 @@
 /* ====== SECTION (premium black + neon depth) ====== */
 .section {
+  position: relative;
   min-height: 100vh;
-  padding: 104px 20px;
-  background: radial-gradient(1200px 900px at 15% 10%, rgba(0, 212, 255, 0.14), transparent 64%),
-              radial-gradient(1100px 900px at 92% 2%, rgba(185, 99, 255, 0.14), transparent 64%),
-              #000;
+  padding: 86px 20px;
+
+  /* deep space + neon v2 */
+  background:
+    radial-gradient(1200px 900px at 12% 8%, rgba(0, 212, 255, 0.16), transparent 60%),
+    radial-gradient(1100px 860px at 92% 0%, rgba(185, 99, 255, 0.14), transparent 64%),
+    #050818;
   overflow: hidden;
+}
+
+/* subtle moving “dust” layer (premium, not distracting) */
+.section::before {
+  content: "";
+  position: absolute;
+  inset: -2px;
+  background:
+    radial-gradient(1px 1px at 10% 22%, rgba(255,255,255,0.9), transparent 72%),
+    radial-gradient(1px 1px at 30% 64%, rgba(255,255,255,0.65), transparent 72%),
+    radial-gradient(1px 1px at 72% 34%, rgba(255,255,255,0.55), transparent 72%),
+    radial-gradient(1px 1px at 88% 80%, rgba(255,255,255,0.7), transparent 72%),
+    radial-gradient(1px 1px at 56% 12%, rgba(255,255,255,0.6), transparent 74%);
+  opacity: 0.9;
+  animation: drift 18s linear infinite;
+  pointer-events: none;
+}
+
+.section::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(5, 8, 24, 0.92), rgba(5, 8, 24, 0.22) 38%, rgba(5, 8, 24, 0.95));
+  pointer-events: none;
+}
+
+@keyframes drift {
+  from { transform: translate3d(0, 0, 0); }
+  to   { transform: translate3d(-14px, 12px, 0); }
 }
 
 .container {
@@ -29,20 +62,20 @@
   align-items: center;
   padding: 6px 12px;
   border-radius: 999px;
-  border: 1px solid rgba(255, 255, 255, 0.22);
-  background: linear-gradient(135deg, rgba(10, 24, 60, 0.9), rgba(12, 16, 38, 0.35));
-  color: rgba(236, 250, 255, 0.96);
+  border: 1px solid rgba(0, 212, 255, 0.6);
+  background: linear-gradient(135deg, rgba(0, 212, 255, 0.2), rgba(185, 99, 255, 0.12));
+  color: #00e6ff;
   font-weight: 900;
   letter-spacing: 0.2px;
-  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.55);
+  text-shadow: 0 0 12px rgba(0, 212, 255, 0.6);
 }
 
 .title {
   margin: 12px 0 8px;
-  font-size: clamp(26px, 3.2vw, 38px);
+  font-size: clamp(28px, 3.2vw, 40px);
   letter-spacing: -0.22px;
   color: #f3fbff;
-  text-shadow: 0 14px 34px rgba(0, 0, 0, 0.66);
+  text-shadow: 0 0 16px rgba(0, 212, 255, 0.5), 0 0 28px rgba(185, 99, 255, 0.4);
 }
 
 .lead {

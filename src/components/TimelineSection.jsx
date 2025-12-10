@@ -3,8 +3,13 @@ import styles from "./TimelineSection.module.css";
 const TimelineSection = () => (
   <section className={styles.section} id="timeline">
     <div className={styles.container}>
-      <h2 className={styles.heading}>Your Day in the Meeting Matrix</h2>
-      <p className={styles.sub}>A clean snapshot of what “progress” usually looks like—until the system is fixed.</p>
+     <div className={styles.header}>
+          <div className={styles.kicker}>Meeting Load Index.</div>
+          <h2 className={styles.title}>Your Day in the Meeting Matrix</h2>
+          <p className={styles.lead}>
+            A clean snapshot of what “progress” usually looks like—until the system is fixed.
+          </p>
+        </div>
 
       <div className={styles.row}>
 

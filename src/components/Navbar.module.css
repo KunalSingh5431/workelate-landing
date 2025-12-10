@@ -87,6 +87,7 @@
   transform: scaleX(1);
 }
 
+/* CTA BUTTON (updated gradient only) */
 .cta {
   position: relative;
   height: 46px;
@@ -96,26 +97,31 @@
   font-size: 15px;
   font-weight: 900;
   letter-spacing: 0.2px;
-  background: linear-gradient(90deg, #6f00ff, #00d4ff);
+
+  /* NEW STATIC GRADIENT (cyan → purple → deep purple) */
+  background: linear-gradient(90deg, #00d4ff, #7b2cff, #4a00e0);
+
   color: #fff;
   cursor: pointer;
   overflow: hidden;
-
   transition: transform 180ms ease, box-shadow 200ms ease;
 }
 
-/* Neon aura layer */
+/* Neon aura layer (same) */
 .cta::before {
   content: "";
   position: absolute;
-  inset: -8px; /* slightly outside button */
+  inset: -8px;
   border-radius: inherit;
+
+  /* aura matches button colors */
   background: radial-gradient(
     circle,
     rgba(0, 212, 255, 0.65),
-    rgba(111, 0, 255, 0.65),
+    rgba(123, 44, 255, 0.65),
     transparent 70%
   );
+
   opacity: 0;
   filter: blur(18px);
   transform: scale(0.6);
@@ -123,18 +129,18 @@
   z-index: -1;
 }
 
-/* On hover: aura expands from all sides */
+/* Hover: same effects */
 .cta:hover::before {
   opacity: 1;
   transform: scale(1);
 }
 
-/* Button movement + glow */
 .cta:hover {
   transform: translateY(-2px) scale(1.04);
   box-shadow: 0 10px 30px rgba(0, 212, 255, 0.25),
-              0 0 24px rgba(111, 0, 255, 0.35);
+              0 0 24px rgba(123, 44, 255, 0.35);
 }
+
 
 /* Small screens cleanup */
 @media (max-width: 680px) {

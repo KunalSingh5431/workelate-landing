@@ -8,6 +8,7 @@ import WorkdayComparison from './components/WorkdayComparison';
 import TimelineSection from './components/TimelineSection';
 import QuizSection from './components/QuizSection';
 import ResultCard from './components/ResultCard';
+import ChaosQuiz from './components/ChaosQuiz';
 
 const App = () => (
   <Layout style={{ background: '#0f0f0f', color: '#fff', minHeight: '100vh' }}>
@@ -16,6 +17,7 @@ const App = () => (
     <WhyTeamsFail />
     <AppGrid />
     <WorkdayComparison />
+    <ChaosQuiz/>
     <TimelineSection />
 
     {/* ✅ This block replaces the quiz area (one at a time) */}

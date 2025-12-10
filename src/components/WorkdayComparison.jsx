@@ -4,7 +4,13 @@ const WorkdayComparison = () => (
   <section className={styles.section} id="workday">
     <div className={styles.bgGlow} />
     <div className={styles.container}>
-      <h2 className={styles.heading}>Be Honest: Is This Your Workday?</h2>
+      <div className={styles.header}>
+                <div className={styles.kicker}>Work shouldn’t feel this messy.</div>
+                <h2 className={styles.headerTitle}>Be Honest: Is This Your Workday?</h2>
+                <p className={styles.headerLead}>
+                 Too many tools, too many pings, too little progress. We bring everything—tasks, comms, owners, and plans—into one clear flow so your day actually moves forward.
+                </p>
+        </div>
 
       <div className={styles.grid}>
 

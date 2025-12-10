@@ -66,20 +66,20 @@
   align-items: center;
   padding: 6px 12px;
   border-radius: 999px;
-  border: 1px solid rgba(255, 255, 255, 0.22);
-  background: linear-gradient(135deg, rgba(10, 24, 60, 0.86), rgba(12, 16, 38, 0.34));
-  color: rgba(236, 250, 255, 0.96);
+  border: 1px solid rgba(0, 212, 255, 0.6);
+  background: linear-gradient(135deg, rgba(0, 212, 255, 0.2), rgba(185, 99, 255, 0.12));
+  color: #00e6ff;
   font-weight: 900;
   letter-spacing: 0.2px;
-  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.55);
+  text-shadow: 0 0 12px rgba(0, 212, 255, 0.6);
 }
 
 .title {
   margin: 12px 0 8px;
-  font-size: clamp(26px, 3.2vw, 38px);
+  font-size: clamp(28px, 3.2vw, 40px);
   letter-spacing: -0.22px;
   color: #f3fbff;
-  text-shadow: 0 14px 34px rgba(0, 0, 0, 0.66);
+  text-shadow: 0 0 16px rgba(0, 212, 255, 0.5), 0 0 28px rgba(185, 99, 255, 0.4);
 }
 
 .lead {
