@@ -1,6 +1,7 @@
 // ChaosQuiz.jsx
 import { useState } from 'react';
 import styles from './ChaosQuiz.module.css';
+import { CalculatorIcon } from 'lucide-react';
 
 const offlineOptions = ['Every damn day', 'Often', 'Rarely'];
 

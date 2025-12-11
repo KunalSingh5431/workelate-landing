@@ -2,6 +2,7 @@ import { Menu, Button } from "antd";
 import { useState } from "react";
 import { Link } from "react-scroll";
 import styles from "./Navbar.module.css";
+import { RocketIcon } from "lucide-react";
 
 const Navbar = () => {
   const [current, setCurrent] = useState("");
@@ -48,6 +49,7 @@ const Navbar = () => {
             onMouseEnter={(e) => e.currentTarget.classList.add(styles.ctaHover)}
             onMouseLeave={(e) => e.currentTarget.classList.remove(styles.ctaHover)}
           >
+          <RocketIcon size={18} strokeWidth={2.4} style={{ marginLeft: "8px" }} />
             Escape Tool Hell →
           </Button>
         </div>
